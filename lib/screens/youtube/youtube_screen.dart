@@ -1,5 +1,5 @@
 import 'package:demixr_app/providers/youtube_provider.dart';
-import 'package:demixr_app/screens/youtube/components/search_bar.dart';
+import 'package:demixr_app/screens/youtube/components/search_bar.dart' as demixr_search_bar; // Use alias for clarity
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +15,7 @@ class YoutubeScreen extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: const [
-            SearchBar(),
+            demixr_search_bar.SearchBar(), // Use the alias to explicitly reference the SearchBar
           ],
         ),
       ),

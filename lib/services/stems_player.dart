@@ -35,9 +35,9 @@ class StemsPlayer {
 
   AudioPlayer get aPlayer => players[Stem.vocals]!;
 
-  Stream<Duration> get onAudioPositionChanged => aPlayer.onAudioPositionChanged;
+  Stream<Duration> get onAudioPositionChanged => aPlayer.onPositionChanged;
 
-  Stream<void> get onPlayerCompletion => aPlayer.onPlayerCompletion;
+  Stream<void> get onPlayerCompletion => aPlayer.onPlayerComplete;
 
   StemState getStemState(Stem stem) => stemStates[stem] ?? StemState.mute;
 
@@ -47,7 +47,7 @@ class StemsPlayer {
 
   void setUrls(UnmixedSong song) {
     players.forEach(
-        (stem, player) => player.setUrl(song.getStem(stem), isLocal: true));
+        (stem, player) => player.setSourceDeviceFile(song.getStem(stem)));
   }
 
   void pause() {

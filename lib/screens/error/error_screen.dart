@@ -19,8 +19,7 @@ class ErrorScreen extends StatelessWidget {
             left: 50,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Colors.black,
-                primary: Colors.white,
+                foregroundColor: Colors.white, backgroundColor: Colors.black,
                 minimumSize: const Size(150, 50),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),

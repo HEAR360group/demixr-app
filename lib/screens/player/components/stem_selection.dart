@@ -16,11 +16,11 @@ class StemSelection extends StatelessWidget {
         borderRadius: const BorderRadius.all(radius),
         border: Border.all(width: 2, color: ColorPalette.surfaceVariant),
       ),
-      child: Padding(
+      child: const Padding(
         padding:
-            const EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 10),
+            EdgeInsets.only(left: 20, top: 10, right: 20, bottom: 10),
         child: Column(
-          children: const [
+          children: [
             StemButton(Stem.vocals),
             StemButton(Stem.bass),
             StemButton(Stem.drums),

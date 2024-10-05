@@ -2,7 +2,7 @@ import 'package:demixr_app/constants.dart';
 import 'package:demixr_app/providers/youtube_provider.dart';
 import 'package:demixr_app/screens/youtube/components/video_list.dart';
 import 'package:flutter/material.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';
 import 'package:provider/provider.dart';
 
 class SearchBar extends StatelessWidget {

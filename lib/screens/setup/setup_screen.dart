@@ -13,10 +13,10 @@ class SetupScreen extends StatelessWidget {
         margin: const EdgeInsets.only(left: 20, top: 70, right: 20, bottom: 30),
         height: double.maxFinite,
         width: double.maxFinite,
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
+          children: [
             SetupTitle(),
             Instructions(),
             ModelSelection(),

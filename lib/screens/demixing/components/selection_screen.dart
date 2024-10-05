@@ -45,10 +45,10 @@ class SelectionScreen extends StatelessWidget {
           Expanded(
             child: ChangeNotifierProvider(
               create: (context) => SongProvider(),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
+                children: [
                   PageTitle('Demixing'),
                   SongSelection(),
                   FractionallySizedBox(

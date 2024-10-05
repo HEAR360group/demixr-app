@@ -18,17 +18,17 @@ import '../utils.dart';
 class YoutubeProvider extends ChangeNotifier {
   final SongProvider songProvider;
   final SearchClient _youtube = YoutubeExplode().search;
-  Either<Failure, SearchList> _videos = Left(NoSearchResult());
+  Either<Failure, VideoSearchList> _videos = Left(NoSearchResult());
 
   YoutubeProvider(this.songProvider);
 
   /// The videos of the current search.
-  Either<Failure, SearchList> get videos => _videos;
+  Either<Failure, VideoSearchList> get videos => _videos;
 
   /// Searches the [query] on youtube with [YoutubeExplode].
   Future<void> search(String query) async {
     try {
-      final searchList = await _youtube.getVideos(query);
+      final searchList = await _youtube.search(query) as VideoSearchList;
       _videos = Right(searchList);
     } on SocketException {
       _videos = Left(NoInternetConnection());
