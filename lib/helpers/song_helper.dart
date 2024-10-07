@@ -201,7 +201,7 @@ Future<String> convertToWav(String path) async {
   final session = await FFprobeKit.getMediaInformation(path);
   final information = session.getMediaInformation();
 
-  String? format = information?.getStringProperty('format_name');
+  String? format = information?.getFormatProperty('format_name');
 
   if (format == null) {
     throw ConversionException('SongLoader: Failed to get the file format');
